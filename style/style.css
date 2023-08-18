@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#34495e), to(#f39c12));
+  background-image: linear-gradient(180deg, #34495e, #f39c12);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Arial";
+}
+
+.calc {
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.32);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.calc-control {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+      grid-template-areas: ". . . ." ". . . ." ". . . ." ". . . ." "zero zero . .";
+}
+.calc-control__func {
+  height: 64px;
+  width: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #A5A5A5;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calc-control__math {
+  height: 64px;
+  width: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F19A38;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calc-control__number {
+  height: 64px;
+  width: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F19A38;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calc-control__number--dot, .calc-control__number--zero {
+  height: 64px;
+  width: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333333;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calc-control__number--zero {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  width: 100%;
+  border-radius: 50px;
+  grid-area: zero;
+}

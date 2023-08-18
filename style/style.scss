@@ -1,0 +1,75 @@
+@import "_mixin.scss";
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(180deg, #34495e, #f39c12);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial";
+}
+
+.calc {
+
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+
+.calc-result {
+
+    &__display {}
+}
+
+.calc-control {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        "zero zero . .";
+
+    &__func {
+        @include buttonIOS(#A5A5A5, #000000);
+    }
+
+    &__math {
+        @include buttonIOS(#F19A38, #FFFFFF);
+    }
+
+    &__number {
+        @include buttonIOS(#F19A38, #FFFFFF);
+
+        &--dot,
+        &--zero {
+            @include buttonIOS(#333333, #FFFFFF);
+        }
+
+        &--zero {
+            width: 100%;
+            border-radius: 50px;
+            grid-area: zero;
+        }
+    }
+}

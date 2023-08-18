@@ -1,0 +1,13 @@
+@mixin buttonIOS($bgColor, $color) {
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgColor;
+    color: $color;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
