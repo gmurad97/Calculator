@@ -32,23 +32,46 @@ body {
 }
 
 .calc {
-  height: auto;
   background-color: rgba(0, 0, 0, 0.32);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.calc-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.32);
+  border-radius: 16px;
+  padding: 32px 16px;
+  margin-bottom: 32px;
+}
+.calc-result__display {
+  font-size: 32px;
+  font-weight: lighter;
+  color: #FFFFFF;
 }
 
 .calc-control {
-  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+  -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+  -ms-grid-rows: 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 10px 10px;
+  gap: 16px 16px;
       grid-template-areas: ". . . ." ". . . ." ". . . ." ". . . ." "zero zero . .";
 }
 .calc-control__func {
@@ -68,7 +91,23 @@ body {
   font-weight: bold;
   font-size: 20px;
   border-radius: 50%;
+  -webkit-transition: -webkit-filter 128ms linear;
+  transition: -webkit-filter 128ms linear;
+  transition: filter 128ms linear;
+  transition: filter 128ms linear, -webkit-filter 128ms linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+}
+.calc-control__func:hover {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+.calc-control__func:active {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 .calc-control__math {
   height: 64px;
@@ -87,7 +126,23 @@ body {
   font-weight: bold;
   font-size: 20px;
   border-radius: 50%;
+  -webkit-transition: -webkit-filter 128ms linear;
+  transition: -webkit-filter 128ms linear;
+  transition: filter 128ms linear;
+  transition: filter 128ms linear, -webkit-filter 128ms linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+}
+.calc-control__math:hover {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+.calc-control__math:active {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 .calc-control__number {
   height: 64px;
@@ -106,7 +161,23 @@ body {
   font-weight: bold;
   font-size: 20px;
   border-radius: 50%;
+  -webkit-transition: -webkit-filter 128ms linear;
+  transition: -webkit-filter 128ms linear;
+  transition: filter 128ms linear;
+  transition: filter 128ms linear, -webkit-filter 128ms linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+}
+.calc-control__number:hover {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+.calc-control__number:active {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 .calc-control__number--dot, .calc-control__number--zero {
   height: 64px;
@@ -125,7 +196,23 @@ body {
   font-weight: bold;
   font-size: 20px;
   border-radius: 50%;
+  -webkit-transition: -webkit-filter 128ms linear;
+  transition: -webkit-filter 128ms linear;
+  transition: filter 128ms linear;
+  transition: filter 128ms linear, -webkit-filter 128ms linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+}
+.calc-control__number--dot:hover, .calc-control__number--zero:hover {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+.calc-control__number--dot:active, .calc-control__number--zero:active {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 .calc-control__number--zero {
   -ms-grid-row: 9;

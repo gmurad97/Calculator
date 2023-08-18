@@ -9,5 +9,15 @@
     font-weight: bold;
     font-size: 20px;
     border-radius: 50%;
+    transition: filter 128ms linear;
+    user-select: none;
     cursor: pointer;
+
+    &:hover{
+        filter: brightness(60%);
+    }
+
+    &:active{
+        filter: brightness(70%);
+    }
 }
