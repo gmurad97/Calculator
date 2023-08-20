@@ -13,11 +13,11 @@
     user-select: none;
     cursor: pointer;
 
-    &:hover{
-        filter: brightness(60%);
+    &:hover {
+        background-color: darken($color: $bgColor, $amount: 24);
     }
 
-    &:active{
-        filter: brightness(70%);
+    &:active {
+        background-color: darken($color: $bgColor, $amount: 16);
     }
 }
